@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Word</title>
+</head>
+<body>
+	<h6> Random Word (Generation #{{request.session.counterforgame}})</h6>
+
+	<h4>{{unique}}</h4>
+
+	<form action='/genRef' method='POST'>
+		{% csrf_token %}
+		<input type='submit' value='Re-Generate'>
+		
+	</form>
+
+</body>
+</html>
